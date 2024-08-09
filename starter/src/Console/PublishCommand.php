@@ -4,6 +4,7 @@ namespace Trax\Starter\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Trax\Framework\Service\Config;
 
 class PublishCommand extends Command
 {
@@ -30,7 +31,9 @@ class PublishCommand extends Command
     {
         $this->line('');
 
-        if (!File::exists(base_path('trax/core/starter/build'))) {
+        $buildPath = Config::servicePath('starter') . '/build';
+
+        if (!File::exists($buildPath)) {
             $this->error('The assets folder of the Starter Edition does not exist.');
             $this->line('');
             return;
@@ -39,7 +42,7 @@ class PublishCommand extends Command
         File::deleteDirectory(public_path('starter'));
         $this->info('Former assets folder deleted');
 
-        File::copyDirectory(base_path('trax/core/starter/build'), public_path('starter'));
+        File::copyDirectory($buildPath, public_path('starter'));
         $this->info('New assets folder copyed');
 
         $this->line('');
