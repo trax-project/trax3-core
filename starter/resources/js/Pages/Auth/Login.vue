@@ -6,6 +6,13 @@ import InputLabel from "@starter/Components/Forms/Classic/InputLabel.vue";
 import InputError from "@starter/Components/Forms/Classic/InputError.vue";
 import { Head, useForm } from "@inertiajs/vue3";
 
+const props = defineProps({
+    app: {
+        type: Object,
+        required: true,
+    },
+});
+
 const form = useForm({
     email: "",
     password: "",
@@ -87,5 +94,9 @@ const submit = () => {
                 >
             </p>
         </div>
+
+        <p class="mt-10 text-center text-sm text-gray-500">
+            Starter Edition {{ app.release }}
+        </p>
     </GuestLayout>
 </template>

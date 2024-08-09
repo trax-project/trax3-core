@@ -85,6 +85,16 @@ class Config
     }
 
     /**
+     * Return the application data.
+     *
+     * @return array
+     */
+    public static function appData(): array
+    {
+        return ['app' => config('trax.app')];
+    }
+
+    /**
      * Return the app config.
      *
      * @return array

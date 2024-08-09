@@ -33,6 +33,7 @@ abstract class HandleInertiaRequests extends Middleware
                 ]);
             }],
 
+            Config::appData(),
             Config::authData(),
             Config::storesData(),
         );
