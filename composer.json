@@ -1,0 +1,29 @@
+{
+    "name": "trax3/core",
+    "description": "TRAX LRS core features",
+    "keywords": ["trax", "lrs", "xapi"],
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "homepage": "http://traxlrs.com",
+    "authors": [
+        {
+            "name": "Sébastien Fraysse",
+            "email": "sebastien@fraysse.eu",
+            "homepage": "http://fraysse.eu"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Trax\\Activities\\": "activities/src/",
+            "Trax\\ActivityProfiles\\": "activity-profiles/src/",
+            "Trax\\AgentProfiles\\": "agent-profiles/src/",
+            "Trax\\Agents\\": "agents/src/",
+            "Trax\\Framework\\": "framework/src/",
+            "Trax\\Gateway\\": "gateway/src/",
+            "Trax\\Starter\\": "starter/src/",
+            "Trax\\Statements\\": "statements/src/",
+            "Trax\\States\\": "states/src/"
+        }
+    }
+}
