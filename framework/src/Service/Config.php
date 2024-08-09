@@ -2,6 +2,8 @@
  
 namespace Trax\Framework\Service;
 
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 use Trax\Framework\Context;
 use Trax\Framework\Auth\StoreRepository;
 
@@ -414,10 +416,20 @@ class Config
      *
      * @param  string  $service
      * @return string
+     *
+     * @throws \Exception
      */
     public static function servicePath(string $service)
     {
-        return self::serviceConfig($service)['path'];
+        $path = self::serviceConfig($service)['path'];
+        if (!File::exists(base_path($path))) {
+            // Try to find the folder in vendor.
+            $path = 'vendor/' . Str::of($path)->replace('trax/', 'trax3/');
+            if (!File::exists(base_path($path))) {
+                throw new \Exception("Service '$service' not found.");
+            }
+        }
+        return $path;
     }
 
     /**

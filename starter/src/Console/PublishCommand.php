@@ -2,13 +2,8 @@
 
 namespace Trax\Starter\Console;
 
-use Symfony\Component\Process\Process;
 use Illuminate\Console\Command;
-use Trax\Framework\Context;
-use Trax\Framework\Auth\ClientRepository;
-
 use Illuminate\Support\Facades\File;
-
 
 class PublishCommand extends Command
 {
