@@ -108,6 +108,7 @@ class Config
             'APP_ENV' => config('app.env'),
             'APP_DEBUG' => config('app.debug'),
             'APP_URL' => config('app.url'),
+            'APP_KEY' => config('app.key'),
             
             // Main database.
             'DB_CONNECTION' => $connection,
@@ -115,6 +116,13 @@ class Config
             'DB_PORT' => config("database.connections.$connection.port"),
             'DB_DATABASE' => config("database.connections.$connection.database"),
             'DB_SCHEMA' => config("database.connections.$connection.search_path"),
+
+            // Features.
+            'EXTENDED_EDITION' => config("trax.features.extended-edition"),
+            'DATA_API' => config("trax.features.data-api"),
+            'JOBS_API' => config("trax.features.jobs-api"),
+            'LOGGING_API' => config("trax.features.logging-api"),
+            'ACCESS_API' => config("trax.features.access-api"),
 
             // xAPI main settings.
             // Don't remove it from here. Starter edition needs it.
@@ -152,6 +160,7 @@ class Config
             'PIPELINE_DEFAULT_UPDATE_ACTIVITY_IDS' => config('trax.pipeline.update_activity_ids.default'),
             'PIPELINE_DEFAULT_UPDATE_AGENT_IDS' => config('trax.pipeline.update_agent_ids.default'),
             'PIPELINE_DEFAULT_QUERY_TARGETING' => config('trax.pipeline.query_targeting.default'),
+            'PIPELINE_DEFAULT_PSEUDONYMIZE_STATEMENTS' => config('trax.pipeline.pseudonymize_statements.default'),
 
             // xAPI pipeline forced.
             'PIPELINE_FORCED_VALIDATE_STATEMENTS' => config('trax.pipeline.validate_statements.forced'),
@@ -164,6 +173,7 @@ class Config
             'PIPELINE_FORCED_UPDATE_ACTIVITY_IDS' => config('trax.pipeline.update_activity_ids.forced'),
             'PIPELINE_FORCED_UPDATE_AGENT_IDS' => config('trax.pipeline.update_agent_ids.forced'),
             'PIPELINE_FORCED_QUERY_TARGETING' => config('trax.pipeline.query_targeting.forced'),
+            'PIPELINE_FORCED_PSEUDONYMIZE_STATEMENTS' => config('trax.pipeline.pseudonymize_statements.forced'),
 
             // Testsuite.
             'TESTSUITE_PATH' => config('trax.testsuite.path'),
@@ -184,6 +194,23 @@ class Config
             // Default xAPI endpoint URL.
             'DEFAULT_ENDPOINT_URL' => self::defaultXapiEndpoint(),
             'DEFAULT_ENDPOINT_USERNAME' => config('trax.auth.endpoint.username'),
+        ]];
+    }
+
+    /**
+     * Return the auth service config.
+     *
+     * @return array
+     */
+    public static function authServiceSettings(): array
+    {
+        return ['settings' => [
+            // Database.
+            'AUTH_DB_DRIVER' => config("database.connections.auth.driver"),
+            'AUTH_DB_HOST' => config("database.connections.auth.host"),
+            'AUTH_DB_PORT' => config("database.connections.auth.port"),
+            'AUTH_DB_DATABASE' => config("database.connections.auth.database"),
+            'AUTH_DB_SCHEMA' => config("database.connections.auth.schema"),
         ]];
     }
 

@@ -93,6 +93,7 @@ class FrameworkServiceProvider extends ServiceProvider
             \Trax\Framework\Console\DatabaseInstallCommand::class,
             \Trax\Framework\Console\DatabaseDropCommand::class,
             \Trax\Framework\Console\ServeCommand::class,
+            \Trax\Framework\Console\TestCommand::class,
         ]);
         
         // Load all the migrations.
