@@ -25,5 +25,16 @@
             "Trax\\Statements\\": "statements/src/",
             "Trax\\States\\": "states/src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trax\\Activities\\Tests\\": "activities/tests/",
+            "Trax\\ActivityProfiles\\Tests\\": "activity-profiles/tests/",
+            "Trax\\Agents\\Tests\\": "agents/tests/",
+            "Trax\\AgentProfiles\\Tests\\": "agent-profiles/tests/",
+            "Trax\\Framework\\Tests\\": "framework/tests/",
+            "Trax\\States\\Tests\\": "states/tests/",
+            "Trax\\Statements\\Tests\\": "statements/tests/"
+        }
     }
 }
