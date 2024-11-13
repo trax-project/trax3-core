@@ -100,6 +100,7 @@ trait ReorderStatement
         return self::reorderProps($definition, [
             'type', 'name', 'description', 'moreInfo', 'interactionType',
             'correctResponsesPattern', 'choices', 'scale', 'source', 'target', 'steps',
+            'extensions'
         ]);
     }
 
