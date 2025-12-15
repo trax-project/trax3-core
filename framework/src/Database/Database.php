@@ -199,9 +199,9 @@ abstract class Database
      * Show a status in the console.
      *
      * @param  \Illuminate\Console\Command  $console
-     * @return void
+     * @return int
      */
-    public function consoleStatus(Command $console): void
+    public function consoleStatus(Command $console): int
     {
         $console->info('Database:');
         $console->line('Driver: ' . config('database.connections.' . self::connection() . '.driver'));
@@ -209,17 +209,21 @@ abstract class Database
         $console->line('Port: ' . config('database.connections.' . self::connection() . '.port'));
         $console->line('');
 
+        $hasError = false;
+
         foreach (self::tables() as $table) {
             $console->info($table . ' table:');
             $status = $this->$table->checkStatus();
             if (!$status->ready) {
                 $console->error($status->reason);
                 $console->line('');
+                $hasError = true;
             } else {
                 $console->line('Status: ready');
                 $console->line('');
             }
         }
+        return $hasError ? 1 : 0;
     }
 
     /**
