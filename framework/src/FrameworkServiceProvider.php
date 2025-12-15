@@ -93,8 +93,14 @@ class FrameworkServiceProvider extends ServiceProvider
             \Trax\Framework\Console\DatabaseInstallCommand::class,
             \Trax\Framework\Console\DatabaseDropCommand::class,
             \Trax\Framework\Console\ServeCommand::class,
-            \Trax\Framework\Console\TestCommand::class,
         ]);
+
+        // Register the TestCommand only if the Collision package is installed.
+        if (class_exists(\NunoMaduro\Collision\Adapters\Laravel\Commands\TestCommand::class)) {
+            $this->commands([
+                \Trax\Framework\Console\TestCommand::class,
+            ]);
+        }
         
         // Load all the migrations.
         $this->loadServicesMigrations();
