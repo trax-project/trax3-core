@@ -81,7 +81,10 @@ class Config
      */
     public static function authData(): array
     {
-        return ['auth' => Context::user()];
+        return ['auth' => [
+            'user' => Context::user(),
+            'passwords' => config('trax.auth.passwords'),
+        ]];
     }
 
     /**
