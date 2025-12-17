@@ -3,7 +3,7 @@
 namespace Trax\Framework\Tests\Utils;
 
 use Illuminate\Support\Str;
-use Tests\TestCase;
+use Trax\Framework\Tests\TestCase;
 use Trax\Framework\Service\Config;
 
 abstract class ServiceApiWithMiddleware extends TestCase

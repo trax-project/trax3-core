@@ -2,7 +2,6 @@
 
 namespace Trax\Framework\Tests;
 
-use Tests\TestCase;
 use Trax\Framework\Tests\Data\Statements;
 use Trax\Framework\Xapi\Schema\Statement as StatementSchema;
 use Trax\Framework\Xapi\Exceptions\XapiValidationException;
