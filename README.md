@@ -15,4 +15,4 @@ TRAX Framework is dual-licensed under:
 - [GNU-GPL3 license](https://www.gnu.org/licenses/gpl-3.0.en.html)
 - [TRAX LRS Extended Edition license](https://docs.traxlrs.com/3.1/starting/license)
 
-Copyright 2022-2024 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
+Copyright 2022-2026 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
