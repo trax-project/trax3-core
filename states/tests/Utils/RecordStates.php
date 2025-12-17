@@ -16,7 +16,7 @@ trait RecordStates
         app(StatesDatabase::class)->clear();
     }
 
-    protected function createState(string $activityId, array $agent, string $stateId, string $registration = null, $content = '', string $contentType = 'application/json', string $store = 'default')
+    protected function createState(string $activityId, array $agent, string $stateId, ?string $registration = null, $content = '', string $contentType = 'application/json', string $store = 'default')
     {
         Context::setStore($store);
 
@@ -34,7 +34,7 @@ trait RecordStates
         ]);
     }
 
-    protected function mergeState(string $activityId, array $agent, string $stateId, string $registration = null, $content = '', string $contentType = 'application/json', string $store = 'default')
+    protected function mergeState(string $activityId, array $agent, string $stateId, ?string $registration = null, $content = '', string $contentType = 'application/json', string $store = 'default')
     {
         Context::setStore($store);
 
@@ -48,7 +48,7 @@ trait RecordStates
         ], true);
     }
 
-    protected function recordState(string $activityId, array $agent, string $stateId, string $registration = null, $content = '', string $contentType = 'application/json', string $store = 'default')
+    protected function recordState(string $activityId, array $agent, string $stateId, ?string $registration = null, $content = '', string $contentType = 'application/json', string $store = 'default')
     {
         Context::setStore($store);
 
