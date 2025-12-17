@@ -1,4 +1,4 @@
-# TRAX Core 3.0
+# TRAX Core 3.1
 
 
 ## About TRAX Core
@@ -13,6 +13,6 @@ It implements a common framework, as well as core xAPI services.
 TRAX Framework is dual-licensed under:
 
 - [GNU-GPL3 license](https://www.gnu.org/licenses/gpl-3.0.en.html)
-- [TRAX LRS Extended Edition license](https://docs.traxlrs.com/3.0/starting/license)
+- [TRAX LRS Extended Edition license](https://docs.traxlrs.com/3.1/starting/license)
 
 Copyright 2022-2024 Sébastien Fraysse, http://fraysse.eu, sebastien@fraysse.eu.
