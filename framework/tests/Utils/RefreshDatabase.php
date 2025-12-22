@@ -56,28 +56,4 @@ trait RefreshDatabase
     {
         return array_key_exists($name, Artisan::all());
     }
-
-    /**
-     * Clean up the testing environment before the next test.
-     *
-     * @return void
-     *
-     * @throws \Mockery\Exception\InvalidCountException
-     */
-    protected function tearDown(): void
-    {       
-        $database = $this->app->make('db');
-
-        foreach (Config::databaseConnections() as $name) {
-            $driver = config('database.connections.' . $name . '.driver');
-
-            // Disconnect only MySQL and PostgreSQL databases.
-            if (in_array($driver, ['mysql', 'pgsql'])) {
-                $connection = $database->connection($name);
-                $connection->disconnect();
-            }
-        }
-        
-        parent::tearDown();
-    }
 }
