@@ -65,7 +65,7 @@ trait RefreshDatabase
      * @throws \Mockery\Exception\InvalidCountException
      */
     protected function tearDown(): void
-    {
+    {       
         $database = $this->app->make('db');
 
         foreach (Config::databaseConnections() as $name) {
@@ -77,5 +77,7 @@ trait RefreshDatabase
                 $connection->disconnect();
             }
         }
+        
+        parent::tearDown();
     }
 }

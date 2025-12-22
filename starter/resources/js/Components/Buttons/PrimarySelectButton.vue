@@ -27,7 +27,7 @@ const emit = defineEmits(["click"]);
             leave-to-class="transform opacity-0 scale-95"
         >
             <MenuItems
-                class="absolute top-auto right-0 z-10 w-48 mt-2 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute top-auto right-0 z-10 w-48 mt-2 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-300 dark:ring-white/10 focus:outline-none"
             >
                 <MenuItem
                     v-for="item in options"

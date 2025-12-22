@@ -24,7 +24,7 @@ const emit = defineEmits(["update:modelValue"]);
     <button
         type="button"
         @click="$emit('update:modelValue', !modelValue)"
-        class="inline-flex items-center gap-x-1 rounded px-3.5 py-2 text-sm font-semibold text-indigo-600 bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:text-indigo-500 dark:hover:bg-white/10 dark:text-fuchsia-400 dark:focus-visible:outline-fuchsia-400"
+        class="cursor-pointer inline-flex items-center gap-x-1 rounded px-3.5 py-2 text-sm font-semibold text-indigo-600 bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:text-indigo-500 dark:hover:bg-white/10 dark:text-fuchsia-400 dark:hover:text-fuchsia-400 dark:focus-visible:outline-fuchsia-400"
     >
         {{ modelValue ? lessLabel : moreLabel }}
         <ChevronUpIcon

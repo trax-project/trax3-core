@@ -74,7 +74,7 @@ watch(
                 :id="id"
                 :name="id"
                 :placeholder="placeholder"
-                class="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-sm leading-6 focus:ring-0 placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                class="block flex-1 border-0 bg-transparent py-1.5 pl-1 pr-3 focus:outline-none text-sm leading-6 focus:ring-0 placeholder:text-gray-400 dark:placeholder:text-gray-500"
                 :class="disabled
                     ? 'text-gray-500 dark:text-gray-500'
                     : 'text-gray-900 dark:text-gray-200'
@@ -96,7 +96,7 @@ watch(
             :placeholder="placeholder"
             :class="[
                 customClass(),
-                'focus-within:z-10 block w-full rounded-md border-0 py-1.5 text-sm leading-6 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:bg-gray-800 dark:placeholder:text-gray-500 dark:focus:ring-indigo-400',
+                'focus-within:z-10 block w-full rounded-md border-0 py-1.5 px-3 text-sm leading-6 ring-inset placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:bg-gray-800 dark:placeholder:text-gray-500 dark:focus:ring-indigo-400',
                 error && showError
                     ? 'ring-2 ring-red-500 dark:ring-red-400'
                     : 'ring-1 ring-gray-300 dark:ring-gray-600',

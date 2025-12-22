@@ -76,12 +76,12 @@ const selected = computed({
             <ListboxButton
                 :class="[
                     lines
-                        ? (disabled ? '' : 'bg-opacity-0 text-white text-opacity-80 dark:bg-opacity-0 .ring-gray-300 focus:ring-white/80')
+                        ? (disabled ? '' : 'bg-white/0 text-white dark:bg-transparent .ring-gray-300 focus:ring-white/80')
                         : (disabled ? '' : 'dark:ring-gray-600 focus:ring-indigo-600 dark:focus:ring-indigo-400'),
                     disabled
                         ? 'cursor-default'
-                        : 'cursor-pointer focus-within:z-10 focus:outline-none focus:ring-2',
-                    'rounded-md relative w-full py-1.5 pl-3 pr-10 text-sm leading-6 text-left ring-1 ring-inset bg-white text-gray-900 ring-gray-300 dark:bg-gray-800 dark:text-gray-200',
+                        : 'cursor-pointer focus-within:z-10 focus:ring-2',
+                    'rounded-md relative w-full py-1.5 pl-3 pr-10 focus:outline-none text-sm leading-6 text-left ring-1 ring-inset bg-white text-gray-900 ring-gray-300 dark:bg-gray-800 dark:text-gray-200',
                 ]"
             >
                 <div v-if="multiple">
@@ -124,7 +124,7 @@ const selected = computed({
                 v-if="!disabled"
             >
                 <ListboxOptions
-                    class="absolute z-10 mt-1 max-h-80 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-sm"
+                    class="absolute z-10 mt-1 max-h-80 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-300 dark:ring-white/10 focus:outline-none text-sm"
                 >
                     <ListboxOption
                         as="template"

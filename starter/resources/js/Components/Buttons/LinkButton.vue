@@ -15,8 +15,8 @@ const props = defineProps({
         @click="$emit('click')"
         :disabled="processing"
         :class="[
-            !processing ? 'hover:text-indigo-500 dark:hover:bg-white/10' : '',
-            'rounded px-3.5 py-2 text-sm font-semibold text-indigo-600 bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-fuchsia-400 dark:focus-visible:outline-fuchsia-400',
+            !processing ? 'hover:text-indigo-500 hover:dark:text-fuchsia-400 dark:hover:bg-white/10' : '',
+            'cursor-pointer rounded px-3.5 py-2 text-sm font-semibold text-indigo-600 bg-transparent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-fuchsia-400 dark:focus-visible:outline-fuchsia-400',
         ]"
     >
         <svg

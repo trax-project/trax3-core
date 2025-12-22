@@ -1,6 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-family-sans: "Inter var", ui-sans-serif, system-ui, sans-serif;
+}
 
 #app {
     @apply h-full;

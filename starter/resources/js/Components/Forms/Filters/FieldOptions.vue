@@ -51,9 +51,9 @@ const selected = computed({
                 :class="[
                     disabled
                         ? 'cursor-default'
-                        : 'cursor-pointer focus-within:z-10 focus:outline-none focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-400',
+                        : 'cursor-pointer focus-within:z-10 focus:ring-2 focus:ring-indigo-600 dark:focus:ring-indigo-400',
                     right ? 'rounded-r-md' : 'rounded-l-md',
-                    'relative w-full py-1.5 pl-3 pr-10 text-sm leading-6 text-left ring-1 ring-inset bg-white text-gray-900 ring-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:ring-gray-600',
+                    'relative w-full py-1.5 pl-3 pr-10 focus:outline-none text-sm leading-6 text-left ring-1 ring-inset bg-white text-gray-900 ring-gray-300 dark:bg-gray-800 dark:text-gray-200 dark:ring-gray-600',
                 ]"
             >
                 <span class="block truncate">{{ selected.name }}</span>
@@ -75,7 +75,7 @@ const selected = computed({
                 v-if="!disabled"
             >
                 <ListboxOptions
-                    class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-sm"
+                    class="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-300 dark:ring-white/10 focus:outline-none text-sm"
                 >
                     <ListboxOption
                         as="template"
